@@ -2,8 +2,6 @@ import { Dimensions, StyleSheet, Platform } from 'react-native';
 import { isIphoneX } from 'react-native-iphone-x-helper';
 
 const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;
-const TITLE_OFFSET = Platform.OS === 'ios' ? 70 : 40;
-const FILTER_HEIGHT = 40;
 let STATUSBAR_HEIGHT;
 
 if (Platform.OS === 'ios') {

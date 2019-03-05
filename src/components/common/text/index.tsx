@@ -35,10 +35,10 @@ const AppText = (props: any) => {
 
 const localStyles = StyleSheet.create({
   text: {
-    fontSize: fontSizeFormat(14),
+    fontSize: fonts.fontSizeFormat(14),
     color: 'black',
     fontWeight: 'normal',
-    fontFamily: fontType.regular
+    fontFamily: fonts.fontType.regular
   }
 });
-export default AppText;
+export { AppText };

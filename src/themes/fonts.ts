@@ -77,7 +77,8 @@ export const fontSizeFormat = (size: number) => {
 };
 
 const fontWeight = {
-  light: '300',
+  light: '100',
+  medium: '300',
   bold: '600',
 };
 
