@@ -9,6 +9,7 @@ import Icon from 'react-native-vector-icons/EvilIcons';
 import { AppText } from '@components';
 import TabBar from '../components/tabbar';
 import Home from '../components/home';
+import ShopCategoryMen from '../components/shopCategoryMen';
 // import { colors } from '@themes';
 
 const getHeader = () => {
@@ -74,21 +75,27 @@ const getHeader = () => {
   );
 };
 
-const TabNavigator = createBottomTabNavigator(
+const HomeStack = createStackNavigator(
   {
     Home: {
       screen: Home
-      // navigationOptions: () => {
-      //   headerTitle: () => <AppText>Storex</AppText>;
-      //   headerStyle: {
-      //     backgroundColor: colors.navBg;
-      //   }
-      //   headerLeft: () => (
-      //     <TouchableOpacity onPress={() => alert('This is a button!')}>
-      //       <Icon name="navicon" size={30} />
-      //     </TouchableOpacity>
-      //   );
-      // }
+    },
+    ShopCategoryMen: {
+      screen: ShopCategoryMen
+    }
+  },
+  {
+    initialRouteName: 'ShopCategoryMen',
+    defaultNavigationOptions: {
+      header: null
+    }
+  }
+);
+
+const TabNavigator = createBottomTabNavigator(
+  {
+    Home: {
+      screen: HomeStack
     }
   },
   {
@@ -100,7 +107,7 @@ const TabNavigator = createBottomTabNavigator(
 );
 
 const AppNavigator = createStackNavigator({
-  Home: {
+  App: {
     screen: TabNavigator,
     navigationOptions: () => ({
       header: getHeader()

@@ -22,31 +22,6 @@ const styles = StyleSheet.create({
         fontSize: fonts.fontSizeFormat(12),
         color: colors.bannerText
     },
-
-    categoryBannerMenWrapper: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: colors.categoryBannerMenBg,
-        padding: 30
-    },
-    categoryBannerWomenWrapper: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: colors.categoryBannerWomenBg,
-        padding: 30
-    },
-    categoryBannerText1: {
-        fontSize: fonts.fontSizeFormat(50),
-        opacity: 0.9,
-        fontFamily: fonts.fontType.exlight,
-        color: colors.bannerText
-    },
-    categoryBannerText2: {
-        fontSize: fonts.fontSizeFormat(21),
-        fontFamily: fonts.fontType.exlight,
-        color: colors.bannerText,
-        marginTop: -20
-    },
     productFeedContainer: {
         backgroundColor: colors.white
     },
