@@ -40,13 +40,13 @@ class ShopCategoryMen extends Component {
         label: 'NEW'
       },
       {
-        productTitle: 'MEN ULTRA LIGHT DOWN SQUARE QUILTED JACKET',
+        productTitle: 'MEN ULTRA LIGHT DOWN SQUARE PACKED JACKET',
         originalPrice: '$120.00',
         slashedPrice: '$110.50',
         label: 'SALE'
       },
       {
-        productTitle: 'MEN ULTRA LIGHT DOWN SQUARE QUILTED JACKET',
+        productTitle: 'URBAN U TOP TRENDING JACKET',
         originalPrice: '$120.00',
         slashedPrice: '$110.50',
         label: 'NEW'
