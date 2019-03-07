@@ -1,3 +1,4 @@
-import Home from './shopCategoryMen';
 
-export default Home;
+import ShopCategoryMen from './shopCategoryMen';
+
+export default ShopCategoryMen;

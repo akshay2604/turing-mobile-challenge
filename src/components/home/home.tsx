@@ -27,7 +27,7 @@ class Home extends Component {
           <CategoryBanner type="men" />
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={() => this.props.navigation.navigate('ShopCategoryMen')}
+          onPress={() => this.props.navigation.navigate('ShopCategoryWomen')}
         >
           <CategoryBanner type="women" />
         </TouchableOpacity>

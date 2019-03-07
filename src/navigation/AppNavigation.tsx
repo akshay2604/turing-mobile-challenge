@@ -10,6 +10,7 @@ import { AppText } from '@components';
 import TabBar from '../components/tabbar';
 import Home from '../components/home';
 import ShopCategoryMen from '../components/shopCategoryMen';
+import ShopCategoryWomen from '../components/shopCategoryWomen';
 // import { colors } from '@themes';
 
 const getHeader = () => {
@@ -82,10 +83,13 @@ const HomeStack = createStackNavigator(
     },
     ShopCategoryMen: {
       screen: ShopCategoryMen
+    },
+    ShopCategoryWomen: {
+      screen: ShopCategoryWomen
     }
   },
   {
-    initialRouteName: 'ShopCategoryMen',
+    initialRouteName: 'Home',
     defaultNavigationOptions: {
       header: null
     }
