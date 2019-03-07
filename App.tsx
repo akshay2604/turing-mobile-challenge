@@ -18,17 +18,13 @@ import { metrics } from '@themes';
 type Props = {};
 export default class App extends Component<Props> {
   render() {
-    return (
-      <View style={styles.container}>
-        <AppContainer />
-      </View>
-    );
+    return <AppContainer />;
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5FCFF'
-  }
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     // flex: 1,
+//     backgroundColor: '#F5FCFF'
+//   }
+// });

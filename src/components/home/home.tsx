@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/EvilIcons';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity, ScrollView } from 'react-native';
 import { colors } from '@themes';
-import styles from './styles.ts';
+import styles from './styles';
 import { AppText } from '@components';
 
 class Home extends Component {
-  static navigationOptions = {
-    headerTitle: <AppText>Storex</AppText>,
-    headerStyle: {
-      backgroundColor: colors.navBg
-    },
-    headerLeft: (
-      <TouchableOpacity onPress={() => alert('This is a button!')}>
-        <Icon name="navicon" size={30} />
-      </TouchableOpacity>
-    )
-  };
+  // static navigationOptions = {
+  //   headerTitle: <AppText>Storex</AppText>,
+  //   headerStyle: {
+  //     backgroundColor: colors.navBg
+  //   },
+  //   headerLeft: (
+  //     <TouchableOpacity onPress={() => alert('This is a button!')}>
+  //       <Icon name="navicon" size={30} />
+  //     </TouchableOpacity>
+  //   )
+  // };
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <ScrollView style={{ flex: 1, backgroundColor: '#f5f5f5' }}>
         <InfoBanner />
         <CategoryBanner type="men" />
         <CategoryBanner type="women" />
         <ProductFeed />
-      </View>
+      </ScrollView>
     );
   }
 }

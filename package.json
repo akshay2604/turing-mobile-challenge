@@ -8,12 +8,15 @@
     "lint": "tslint 'src/**/*,{ts,tsx}'"
   },
   "dependencies": {
+    "@types/react-native-vector-icons": "^4.6.4",
     "@types/react-navigation": "^3.0.4",
     "react": "16.6.3",
     "react-native": "0.58.6",
     "react-native-gesture-handler": "^1.1.0",
     "react-native-iphone-x-helper": "^1.2.0",
+    "react-native-linear-gradient": "^2.5.3",
     "react-native-localize": "^1.1.0",
+    "react-native-svg": "^9.2.4",
     "react-native-vector-icons": "^6.3.0",
     "react-navigation": "^3.3.2"
   },
