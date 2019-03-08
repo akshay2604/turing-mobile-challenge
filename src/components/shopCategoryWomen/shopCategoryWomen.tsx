@@ -56,7 +56,10 @@ class ShopCategoryWomen extends Component {
       <ScrollView style={{ flex: 1, backgroundColor: '#f5f5f5' }}>
         <CategoryBanner type="women" />
         <ProductCategorySlider categories={categories} />
-        <ProductCatalog productCatalog={productCatalog} />
+        <ProductCatalog
+          productCatalog={productCatalog}
+          navigation={this.props.navigation}
+        />
       </ScrollView>
     );
   }
@@ -98,14 +101,17 @@ const ProductCategorySlider = ({ categories }) => {
     </View>
   );
 };
-const ProductCatalog = ({ productCatalog }) => (
+const ProductCatalog = ({ productCatalog, navigation }) => (
   <View>
     <FlatList
       data={productCatalog}
       ItemSeparatorComponent={() => <View style={styles.separator} />}
       keyExtractor={item => item.productTitle}
       renderItem={({ item }) => (
-        <View style={styles.productContainer}>
+        <TouchableOpacity
+          style={styles.productContainer}
+          onPress={() => navigation.navigate('ProductDetail')}
+        >
           <View>
             <View style={styles.productImage} />
           </View>
@@ -132,7 +138,7 @@ const ProductCatalog = ({ productCatalog }) => (
           >
             <AppText style={styles.labelText}>{item.label}</AppText>
           </View>
-        </View>
+        </TouchableOpacity>
       )}
     />
   </View>

@@ -11,6 +11,7 @@ import TabBar from '../components/tabbar';
 import Home from '../components/home';
 import ShopCategoryMen from '../components/shopCategoryMen';
 import ShopCategoryWomen from '../components/shopCategoryWomen';
+import ProductDetail from '../components/productDetail';
 // import { colors } from '@themes';
 
 const getHeader = () => {
@@ -110,7 +111,7 @@ const TabNavigator = createBottomTabNavigator(
   }
 );
 
-const AppNavigator = createStackNavigator({
+const AppStack = createStackNavigator({
   App: {
     screen: TabNavigator,
     navigationOptions: () => ({
@@ -118,6 +119,18 @@ const AppNavigator = createStackNavigator({
     })
   }
 });
+const AppStackWithModal = createStackNavigator(
+  {
+    AppStack: AppStack,
+    ProductDetail: {
+      screen: ProductDetail
+    }
+  },
+  {
+    mode: 'modal',
+    headerMode: 'none'
+  }
+);
 
-const AppContainer = createAppContainer(AppNavigator);
+const AppContainer = createAppContainer(AppStackWithModal);
 export default AppContainer;
